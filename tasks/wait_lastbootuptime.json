@@ -1,0 +1,25 @@
+{
+    "puppet_task_version": 1,
+    "description": "A task to wait until a system's last boot up time has changed.",
+    "input_method": "powershell",
+    "parameters": {
+        "timeout": {
+            "description": "How long to wait in seconds for the system to post an updated last boot up time before exiting with 1.",
+            "type": "Optional[Integer]"
+        },
+        "puppetdbapitoken": {
+            "description": "The PuppetDB API token used to query node facts.",
+            "type": "String",
+            "sensitive": true
+
+        },
+        "node": {
+            "description": "The node to check last boot up time on.",
+            "type": "String"
+        },
+        "puppetmaster": {
+            "description": "The master to query for a node's facts.",
+            "type": "String"
+        }
+    }
+}
